@@ -19,3 +19,18 @@ print(monday[:,2]) # third column
 
 # Matrix operations
 
+# Multiplicación de matrices -> tres formas equivalentes de multiplicar
+
+A = np.array([
+    [1, 2, 3], 
+    [-1, -2, -3]])
+
+B = np.array([
+    [1, 0], 
+    [0, 1],
+    [1, 1]])
+
+print(np.dot(A,B)) 
+print(A.dot(B)) 
+print(A @ B)
+
