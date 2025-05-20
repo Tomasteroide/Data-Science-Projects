@@ -1,58 +1,55 @@
-# 📉 Customer Churn Prediction
+# 🎬 Review Sentiment Classifier
 
-Este proyecto tiene como objetivo predecir qué clientes de una empresa de telecomunicaciones tienen mayor probabilidad de cancelar sus servicios, permitiendo a la organización implementar estrategias proactivas de retención. Se utilizó un enfoque de aprendizaje supervisado, combinado con técnicas de balanceo de clases, ingeniería de características y múltiples algoritmos de clasificación.
+Clasificador de sentimiento basado en reseñas textuales de películas utilizando técnicas de Procesamiento de Lenguaje Natural (NLP) y modelos de clasificación supervisada. Este proyecto tiene como objetivo identificar automáticamente si una reseña es positiva o negativa, permitiendo su uso en plataformas de streaming, foros o sitios de reseñas.
 
 ---
 
 ## 🎯 Objetivo
 
-Construir un modelo de clasificación binaria que identifique clientes propensos a cancelar su contrato, utilizando variables transaccionales, de comportamiento y características personales.
+Desarrollar un modelo de clasificación binaria que determine el sentimiento de una reseña de película (positiva o negativa), utilizando un conjunto de datos etiquetado de IMDb y alcanzando al menos un F1-score de 0.85.
 
 ---
 
 ## 🧰 Tecnologías y Librerías
 
-- Python
-- Pandas, NumPy
-- Scikit-learn
-- XGBoost, LightGBM, CatBoost
-- SMOTETomek, SMOTEENN
-- AdaBoost, Random Forest, Gradient Boosting
-- GridSearchCV
-- Matplotlib, Seaborn
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- NLTK  
+- Matplotlib, Seaborn  
+- TF-IDF  
+- Regresión Logística
 
 ---
 
-## ⚙️ Flujo del proyecto
+## ⚙️ Flujo del Proyecto
 
-1. **Carga y exploración de datos**
-   - Integración de múltiples fuentes: clientes, historial, servicios, tarifas y target
-   - Análisis de distribución, nulos, correlaciones y creación de variables nuevas
+1. **Carga y análisis exploratorio de datos**  
+   - Revisión del dataset de IMDb  
+   - Análisis de balance de clases y longitud de reseñas
 
-2. **Preprocesamiento**
-   - Unificación y limpieza de datos
-   - Generación de nuevas variables como duración del contrato, proporciones de cargos, etc.
-   - Codificación de variables categóricas y escalamiento
+2. **Preprocesamiento de texto**  
+   - Conversión a minúsculas, limpieza de símbolos  
+   - Eliminación de stopwords, tokenización y lematización
 
-3. **Balanceo de clases**
-   - Se probaron métodos como SMOTETomek y SMOTEENN para corregir el desbalance natural entre clientes que cancelan y los que no
+3. **Vectorización de texto**  
+   - Representación numérica de textos mediante TF-IDF
 
-4. **Modelado**
-   - Entrenamiento de múltiples modelos: Decision Tree, Random Forest, Logistic Regression, AdaBoost, XGBoost, LightGBM y CatBoost
-   - Ajuste de hiperparámetros con GridSearchCV
-   - Evaluación con métricas: F1-score, accuracy, ROC-AUC, matriz de confusión
+4. **Entrenamiento de modelos**  
+   - Modelos evaluados: Regresión Logística, Gradient Boosting y Árbol de Decisión  
+   - Evaluación con accuracy, precision, recall y F1-score
 
-5. **Optimización de thresholds**
-   - Ajuste del umbral de probabilidad para maximizar recall sin sacrificar precisión
+5. **Clasificación de reseñas personalizadas**  
+   - Clasificación de textos ingresados por el usuario  
+   - Análisis de palabras más influyentes en la predicción
 
 ---
 
 ## 📊 Resultados
 
-- **Mejores modelos:** AdaBoost y Gradient Boosting + SMOTEENN  
-- **F1-score:** 1.00  
-- **ROC-AUC:** 1.00  
-- **Recall:** 1.00  
-- Los modelos permiten identificar con alta precisión a los clientes en riesgo de fuga, facilitando campañas dirigidas de retención.
+- **Mejor modelo:** Regresión Logística con TF-IDF  
+- **F1-score:** 0.88  
+- El modelo supera el umbral objetivo y permite clasificar correctamente el sentimiento de reseñas de texto en tiempo real.
 
+---
 
