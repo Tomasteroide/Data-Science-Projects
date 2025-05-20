@@ -1,4 +1,4 @@
-# 🎬 Review Sentiment Classifier
+# 🎬 Natural Lenguage Review Classifier
 
 Clasificador de sentimiento basado en reseñas textuales de películas utilizando técnicas de Procesamiento de Lenguaje Natural (NLP) y modelos de clasificación supervisada. Este proyecto tiene como objetivo identificar automáticamente si una reseña es positiva o negativa, permitiendo su uso en plataformas de streaming, foros o sitios de reseñas.
 
