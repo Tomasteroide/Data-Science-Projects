@@ -44,7 +44,3 @@ Construir un modelo de regresión que prediga la cantidad de pedidos de taxi por
 - **RMSE obtenido:** 46.39  
 - El modelo cumple con el objetivo del negocio y permite anticipar con precisión la demanda por hora.
 
----
-
-## 📁 Estructura del repositorio
-
